@@ -78,16 +78,13 @@ namespace ExactTargetSendEmail
 
         public void GetAddressBookFieldInfo(string EmailListXml)
         {
-            //Program.screen = new Screen();
-
-            screen.ID = 1; //address book
+            screen.ID = 1; 
             screen.PageIndex = 1;
             screen.NoOfRecordsPerPage = 100;
             screen.SortingColumn = string.Empty;
             screen.SortingDirection = string.Empty;
 
-            //############ 2-19-2010: wli revision ------------------------------
-            //based on xml in emaillist field, not to based on db
+            
             XmlDocument oXmlDoc = new XmlDocument();
             oXmlDoc.Load(EmailListXml);
 
@@ -115,7 +112,7 @@ namespace ExactTargetSendEmail
         {
             //#########################
             //create ET email
-            //etManager
+            
             Email email = new Email();
 
             email.CharacterSet = "UTF-8";
@@ -188,7 +185,7 @@ namespace ExactTargetSendEmail
 
             listDefaults.Add(fromEmailID);
 
-            //listDefaults.Add(replyEmailID);
+            
 
             var results = createDataExtensionElateral(Convert.ToInt32(accountId), dataExtension,
                 screen.ScreenDetailsCollection, listDefaults);
@@ -232,9 +229,8 @@ namespace ExactTargetSendEmail
             int iSendableDataExtensionFieldIndex = listDEFields.Count;
 
             //##############-----------------------------------------
-            //SubscriberKey ( defined in WC\Web.config) 
-            //SendableDataExtensionField
-            setDEField(ref listDEFields, "SubscriberKey", "SubscriberKey", true, true, DataExtensionFieldType.Text, ref listDefaults);
+            
+            setDEField(ref listDEFields, "SubscriberKey", "YourSubscriberKey", true, true, DataExtensionFieldType.Text, ref listDefaults);
             //##############-----------------------------------------
 
             setDEField(ref listDEFields, "SenderName", "SenderName", true, true, DataExtensionFieldType.Text, ref listDefaults);
@@ -247,7 +243,7 @@ namespace ExactTargetSendEmail
 
             ExactTargetSendEmail.ExactTargetService.Attribute attribute = new ExactTargetSendEmail.ExactTargetService.Attribute();
 
-            attribute.Name = "Subscriber Key"; 
+            attribute.Name = "YourSubscriber Key"; 
             dataExtension.SendableSubscriberField = attribute;
 
             dataExtension.IsSendable = true;
@@ -262,7 +258,7 @@ namespace ExactTargetSendEmail
             APIObject[] objects = { dataExtension };
 
             //#########################-----------
-            // Only for sub-accounts using parent authentication
+            
             ClientID clientID = new ClientID();
             clientID.ID = iClientID;
             clientID.IDSpecified = true;
@@ -358,8 +354,8 @@ namespace ExactTargetSendEmail
             FileTransferLocation fileTransferLocation = new FileTransferLocation();
 
             //###################----------
-            //don't change it! pre-defined! which means where to get uploaded list file
-            fileTransferLocation.CustomerKey = "your FTP" /* DON'T CHANGE */;
+            
+            fileTransferLocation.CustomerKey = "your FTP" ;
             importDef.RetrieveFileTransferLocation = fileTransferLocation;
             //###################----------
 
@@ -452,10 +448,7 @@ namespace ExactTargetSendEmail
             clientID.IDSpecified = true;
             options.Client = clientID;
             //#########################-----------           
-            if (importDef != null)
-            {
-                //log.Debug("ET Request API Object Definitions for 'Perform (startImportDefinition)' Method :" + xmlSerializer.Serialize(new InteractionBaseObject[] { importDef }));
-            }
+           
 
 
             PerformResult[] results =
@@ -553,7 +546,7 @@ namespace ExactTargetSendEmail
 
             Email email = new Email();
             email.Name = "Test";
-            email.ID = 41496172; //email id from createemail response
+            email.ID = 40000001; //email id from createemail response
             email.IDSpecified = true;
             definition.Email = email; //Associate Email with defintion.
 
@@ -575,7 +568,7 @@ namespace ExactTargetSendEmail
             //################################################            
             //assign PUBLICATION_LIST here for UN-Subs
             definition.SendDefinitionList[0].List = new List();
-            definition.SendDefinitionList[0].List.ID = 3958318; // >>my subscribers >> publication list
+            definition.SendDefinitionList[0].List.ID = 1111111; // >>my subscribers >> publication list
             definition.SendDefinitionList[0].List.IDSpecified = true;
 
             //#########################-----------
@@ -650,8 +643,6 @@ namespace ExactTargetSendEmail
 
             options.Client = clientID;
             //#########################-----------
-            //defining encoding style for email 
-            //refer https://developer.salesforce.com/docs/atlas.en-us.noversion.mc-apis.meta/mc-apis/working_with_soap_web_service_api.htm for adding encoding to Soap ET API 
             definition.Email.CharacterSet = "UTF-8";
             APIObject[] objects = { definition };
 

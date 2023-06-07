@@ -50,52 +50,35 @@ namespace ExactTargetSendEmail
             // EMPTY
         }
 
-        /// <summary>
-        /// Gets or sets the <c>ID</c> column value.
-        /// </summary>
-        /// <value>The <c>ID</c> column value.</value>
+        
         public int ID
         {
             get { return _id; }
             set { _id = value; }
         }
 
-        /// <summary>
-        /// Gets or sets the <c>ScreenName</c> column value.
-        /// </summary>
-        /// <value>The <c>ScreenName</c> column value.</value>
+        
         public string ScreenName
         {
             get { return _screenName; }
             set { _screenName = value; }
         }
 
-        /// <summary>
-        /// Gets or sets the <c>CustomerID</c> column value.
-        /// </summary>
-        /// <value>The <c>CustomerID</c> column value.</value>
+        
         public int CustomerID
         {
             get { return _customerID; }
             set { _customerID = value; }
         }
 
-        /// <summary>
-        /// Gets or sets the <c>ModifiedBy</c> column value.
-        /// This column is nullable.
-        /// </summary>
-        /// <value>The <c>ModifiedBy</c> column value.</value>
+        
         public string ModifiedBy
         {
             get { return _modifiedBy; }
             set { _modifiedBy = value; }
         }
 
-        /// <summary>
-        /// Gets or sets the <c>ModifiedOn</c> column value.
-        /// This column is nullable.
-        /// </summary>
-        /// <value>The <c>ModifiedOn</c> column value.</value>
+        
         public System.DateTime ModifiedOn
         {
             get
@@ -108,10 +91,7 @@ namespace ExactTargetSendEmail
             }
         }
 
-        /// <summary>
-        /// Gets or sets the data from screendetails table
-        /// </summary>
-        /// <value>The screendetails collection.</value>
+        
         public List<ScreenDetails> ScreenDetailsCollection
         {
             set
@@ -124,10 +104,7 @@ namespace ExactTargetSendEmail
             get { return this._screenDetailsCollection; }
         }
 
-        /// <summary>
-        /// Returns the string representation of this instance.
-        /// </summary>
-        /// <returns>The string representation of this instance.</returns>
+        
         public override string ToString()
         {
             System.Text.StringBuilder dynStr = new System.Text.StringBuilder(GetType().Name);
@@ -164,59 +141,41 @@ namespace ExactTargetSendEmail
         private bool _filter = false;
         private bool _isMultiline = false;
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScreenDetails"/> class.
-        /// </summary>
+       
         public ScreenDetails()
         {
             // EMPTY
         }
 
-        /// <summary>
-        /// Gets or sets the <c>ID</c> column value.
-        /// </summary>
-        /// <value>The <c>ID</c> column value.</value>
+        
         public int ID
         {
             get { return _id; }
             set { _id = value; }
         }
 
-        /// <summary>
-        /// Gets or sets the <c>ScreenID</c> column value.
-        /// </summary>
-        /// <value>The <c>ScreenID</c> column value.</value>
+        
         public int ScreenID
         {
             get { return _screenID; }
             set { _screenID = value; }
         }
 
-        /// <summary>
-        /// Gets or sets the <c>FieldID</c> column value.
-        /// </summary>
-        /// <value>The <c>FieldID</c> column value.</value>
+        
         public int FieldID
         {
             get { return _fieldID; }
             set { _fieldID = value; }
         }
 
-        /// <summary>
-        /// Gets or sets the <c>FieldName</c> column value.
-        /// </summary>
-        /// <value>The <c>FieldName</c> column value.</value>
+        
         public string FieldName
         {
             get { return _fieldName; }
             set { _fieldName = value; }
         }
 
-        /// <summary>
-        /// Gets or sets the <c>IsVisible</c> column value.
-        /// This column is nullable.
-        /// </summary>
-        /// <value>The <c>IsVisible</c> column value.</value>
+        
         public bool IsVisible
         {
             get
@@ -230,11 +189,7 @@ namespace ExactTargetSendEmail
         }
 
 
-        /// <summary>
-        /// Gets or sets the <c>IsEnable</c> column value.
-        /// This column is nullable.
-        /// </summary>
-        /// <value>The <c>IsEnable</c> column value.</value>
+        
         public bool IsEnable
         {
             get
@@ -248,11 +203,7 @@ namespace ExactTargetSendEmail
         }
 
 
-        /// <summary>
-        /// Gets or sets the <c>IsRequired</c> column value.
-        /// This column is nullable.
-        /// </summary>
-        /// <value>The <c>IsRequired</c> column value.</value>
+        
         public bool IsRequired
         {
             get
@@ -265,11 +216,7 @@ namespace ExactTargetSendEmail
             }
         }
 
-        /// <summary>
-        /// Gets or sets the <c>ShowInSearchCriteria</c> column value.
-        /// This column is nullable.
-        /// </summary>
-        /// <value>The <c>ShowInSearchCriteria</c> column value.</value>
+        
         public bool ShowInSearchCriteria
         {
             get
@@ -282,11 +229,7 @@ namespace ExactTargetSendEmail
             }
         }
 
-        /// <summary>
-        /// Gets or sets the <c>ShowInSearchResults</c> column value.
-        /// This column is nullable.
-        /// </summary>
-        /// <value>The <c>ShowInSearchResults</c> column value.</value>
+        
         public bool ShowInSearchResults
         {
             get
@@ -299,11 +242,7 @@ namespace ExactTargetSendEmail
             }
         }
 
-        /// <summary>
-        /// Gets or sets the <c>IsMultiSelect</c> column value.
-        /// This column is nullable.
-        /// </summary>
-        /// <value>The <c>IsMultiSelect</c> column value.</value>
+        
         public bool IsMultiSelect
         {
             get
@@ -316,11 +255,7 @@ namespace ExactTargetSendEmail
             }
         }
 
-        /// <summary>
-        /// Gets or sets the <c>IsRestricted</c> column value.
-        /// This column is nullable.
-        /// </summary>
-        /// <value>The <c>IsRestricted</c> column value.</value>
+        
         public bool IsRestricted
         {
             get
@@ -333,11 +268,7 @@ namespace ExactTargetSendEmail
             }
         }
 
-        /// <summary>
-        /// Gets or sets the <c>Filter</c> column value.
-        /// This column is nullable.
-        /// </summary>
-        /// <value>The <c>Filter</c> column value.</value>
+       
         public bool Filter
         {
             get
@@ -350,11 +281,7 @@ namespace ExactTargetSendEmail
             }
         }
 
-        /// <summary>
-        /// Gets or sets the <c>IsMultiline</c> column value.
-        /// This column is nullable.
-        /// </summary>
-        /// <value>The <c>IsMultiline</c> column value.</value>
+        
         public bool IsMultiline
         {
             get
@@ -367,10 +294,7 @@ namespace ExactTargetSendEmail
             }
         }
 
-        /// <summary>
-        /// Returns the string representation of this instance.
-        /// </summary>
-        /// <returns>The string representation of this instance.</returns>
+        
         public override string ToString()
         {
             System.Text.StringBuilder dynStr = new System.Text.StringBuilder(GetType().Name);
